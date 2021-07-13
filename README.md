@@ -40,3 +40,7 @@
 최대 입력 크기 N이 8이므로 최대 동시에 push되는 stack frame이 3개이다. 이 값은 바꿀 수 없기 때문에 stack frame의 크기를 줄이면 메모리 사용을 줄일 수 있다. 현재 코드에서는 stack frame에 tmpY, tmpX, tmpN, tmpL, half 5개의 word가 포함된다. 이 중에서 tmpX, tmpY는 다음 subroutine 호출 시 필요하고 tmpL은 복귀 주소를 위해 필요하다. 하지만 half의 경우 tmpN을 push하기 때문에 굳이 push할 필요가 없어진다. 하지만 half 값(tmpN / 2)을 push하지 않는다면 stack으로부터 tmpN을 pop한 뒤 다시 DIV #2 명령어가 추가적으로 필요로 되기 때문에 메모리 절약에 크게 도움이 되지 않는다.
 마지막으로 Immediate addressing 최대화이다.
 Immediate addressing을 최대화하면 메모리까지 접근하지 않아도 된다는 점에서 성능적인 효과가 있고, 그만큼 메모리에 할당하는 변수의 개수가 적어진다는 점에서 메모리 사용을 줄일 수 있다. 따라서 I/O device number, 각종 산술 연산에 필요한 숫자들은 immediate addressing을 최대한으로 사용했다. 하지만 ‘(‘, ‘)’ 값이나 개행 값 등 아스키코드 값들은 # 키워드를 붙인 숫자 값으로 표현했을 때 한눈에 이해하기가 어려워서 immediate addressing을 사용하지 않았다.
+
+## Reference
+
+- [문제출처](https://www.acmicpc.net/problem/1992)
