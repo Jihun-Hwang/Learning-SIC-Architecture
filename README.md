@@ -1,3 +1,6 @@
+## 개요
+해당 프로젝트는 [백준 1992번 '쿼드트리'문제](https://www.acmicpc.net/problem/1992)를 SIC/XE 기반의 어셈블리 언어로 해결합니다.
+
 ## 주요 알고리즘 개요
 
 입력의 크기 N으로부터 2차원 배열의 크기가 N x N임을 알 수 있다. N x N이라는 해결해야 할 문
@@ -44,3 +47,4 @@ Immediate addressing을 최대화하면 메모리까지 접근하지 않아도 �
 ## Reference
 
 - [문제출처](https://www.acmicpc.net/problem/1992)
+- [C++코드](https://github.com/Jihun-Hwang/Algorithm_Study/blob/main/DivideAndConquer/1992_%EC%BF%BC%EB%93%9C%ED%8A%B8%EB%A6%AC.cpp)
